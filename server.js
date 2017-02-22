@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 /* Redirect views path */
 app.set('views',path.join(__dirname,'src/views'));
 /* Setting static directory - image use */
+app.use(express.static('src/lib'));
+app.use(express.static('src/core'));
 app.use(express.static('src/images'));
 app.use(bodyParser.urlencoded({extended: false}));
 /* Setting view engine as ejs */
@@ -28,7 +30,9 @@ app.get('/activity',function(request,response){
 });
 
 app.get('/department',function(request,response){
-    response.end("department");
+    response.render('department-3d',{
+        title: 'Department Intro'
+    });
 });
 
 app.get('/about',function(request,response){
