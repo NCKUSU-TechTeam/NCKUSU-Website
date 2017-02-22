@@ -1,0 +1,138 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content>
+        <meta name="author" content="kevinbird61">
+        <link rel="icon" href="icon.png">
+        <title> <%= title %> </title>
+        <!-- bootstrap css & js -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.9.0/bootstrap-social.min.css" integrity="sha256-02JtFTurpwBjQJ6q13iJe82/NF0RbZlJroDegK5g87Y=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.4/select2.min.css" integrity="sha256-ijlUKKj3hJCiiT2HWo1kqkI79NTEYpzOsw5Rs3k42dI=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.4/select2-bootstrap.min.css" integrity="sha256-NAWFcNIZdH+TS1xpWujF/EB/Y8gwBbEOCoaK/eqaer8=" crossorigin="anonymous" />
+        <style>
+            html,body {
+                height:100%;
+            }
+            .carousel,.item,.active{
+                height:100%;
+            }
+            .carousel-inner {
+                background-image: url("ncku.jpg");
+                background-color: #000000;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100% 85%;
+            }
+            .carousel-inner > .item > img {
+                margin: 0 auto;
+            }
+            .modal-body,.modal-header {
+                background-color: #ffffff;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+
+    <header>
+        <!-- LifeGamer's wrapper -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Navbar header left -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <!-- Now this part is for small view (phone or small screen... etc) -->
+                        <span class="sr-only"> Toggle navigation </span>
+                        <!-- Part of span appearence -->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Setting brand name -->
+                    <a class="navbar-brand" href="#">NCKU Student Union</a>
+                </div>
+                <!-- Navbar header right -->
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height:1px;">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/activity">近期活動</a></li>
+                        <!-- <li><a data-toggle="modal" data-target=".signin-modal">部會介紹</a></li> -->
+                        <li><a href="/department">部會介紹</a></li>
+			            <li><a href="/about">關於我們</a></li>
+                    </ul>
+                </div> <!-- header right end -->
+            </div><!-- nav container end -->
+        </nav>
+        <!-- modal here
+        <div class="modal fade signin-modal in" tabindex="-1" role="dialog" aria-labelledby="devSmallModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">x</span> </button>
+                    <h4 class="modal-title" id="devSmallModalLabel">Choose login mode</h4>
+                </div>
+                <div class="modal-body" style="text-align: center;">
+                    <a href="/auth/github" class="btn btn-lg btn-block btn-social btn-github">
+                        <i class="fa fa-github">
+                        </i>
+                        Using Github Login
+                    </a>
+                </div>
+            </div>
+        </div>-->
+    </header>
+
+    <body>
+        <!-- Using Carousel as main view -->
+        <div id="lifegamer-slide" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#lifegamer-slide" data-slide-to="0" class="active"></li>
+                <li data-target="#lifegamer-slide" data-slide-to="1" class></li>
+                <li data-target="#lifegamer-slide" data-slide-to="2" class></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <!-- Setting wrapper -->
+                <!-- #0 -->
+                <div class="item active">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>歡迎加入學生會！</h1>
+                            <p>新進部員招生中！</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Join us!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- #1 -->
+                <div class="item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Help me, help you</h1>
+                            <p>Collaborate with each other, make your program much better</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- #2 -->
+                <div class="item">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Source code avaliable!</h1>
+                            <p>You can download it for free!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel's control -->
+            <a class="left carousel-control" href="#lifegamer-slide" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="ture"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#lifegamer-slide" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="ture"></span>
+                <span class="sr-only">Next</span>
+            </a>
+    </body>
+</html>
