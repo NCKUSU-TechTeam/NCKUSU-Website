@@ -96,14 +96,12 @@
             <h1 class="display-3">E.S.I.T.</h1>
             <p class="lead">E-Sports and Intelligence Technology</p>
             </div>
-            <div class="col-lg-6">
-                <h4> 網站服務的建置 </h4>
-                <p> 由部長帶領新進的部員學習基本網頁技術! </p>
-            </div>
-            <div class="col-lg-6">
-                <h4> 會內設備的建置與修繕 </h4>
-                <p> 例如: 門禁系統的建立，學習動手解決問題! </p>
-            </div>
+            <% for(var i = 0 ; i < content.content.length ; i++){ %>
+                <div class="col-lg-6">
+                    <h4> <%= content.content[i].title %> </h4>
+                    <p> <%= content.content[i].content %> </p>
+                </div>
+            <% } %>
         </div>
     </body>
 

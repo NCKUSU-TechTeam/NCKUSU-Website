@@ -3,13 +3,16 @@ const app = express();
 const path = require('path');
 const moment = require('moment');
 const bodyParser = require('body-parser');
+const jsfs = require('jsonfile');
 /* Redirect views path */
 app.set('views',path.join(__dirname,'src/views'));
-/* Setting static directory - image use */
+const storage_data = __dirname+'/data';
+/* Setting static directory - resources */
 app.use(express.static('src/lib'));
 app.use(express.static('src/core'));
 app.use(express.static('src/images'));
 app.use(express.static('src/css'));
+app.use(express.static('src/data'));
 app.use(bodyParser.urlencoded({extended: false}));
 /* Setting view engine as ejs */
 app.set('view engine','ejs');
@@ -40,8 +43,12 @@ app.get('/department',function(request,response){
 
 app.get('/about',function(request,response){
     // About tech team
+    /* Read message from exists file */
+    console.log(storage_data+'/about/about.json');
+    var about_msg = jsfs.readFileSync(storage_data+'/about/about.json');
     response.render('about',{
-        title: 'About ESIT'
+        title: 'About ESIT',
+        content: about_msg
     });
 });
 
