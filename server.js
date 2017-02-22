@@ -9,6 +9,7 @@ app.set('views',path.join(__dirname,'src/views'));
 app.use(express.static('src/lib'));
 app.use(express.static('src/core'));
 app.use(express.static('src/images'));
+app.use(express.static('src/css'));
 app.use(bodyParser.urlencoded({extended: false}));
 /* Setting view engine as ejs */
 app.set('view engine','ejs');
@@ -17,7 +18,7 @@ var url = require("url");
 
 // URL maker
 app.get('/',function(request,response){
-    // get all path
+    // Main Page
     var pathname = url.parse(request.url).pathname;
     console.log('Request for ' + pathname + " received.");
     response.render('index',{
@@ -26,17 +27,22 @@ app.get('/',function(request,response){
 });
 
 app.get('/activity',function(request,response){
+    // Activity Page
     response.end("activity");
 });
 
 app.get('/department',function(request,response){
+    // Department Intro page
     response.render('department-3d',{
         title: 'Department Intro'
     });
 });
 
 app.get('/about',function(request,response){
-    response.end('about')
+    // About tech team
+    response.render('about',{
+        title: 'About ESIT'
+    });
 });
 
 // Listen url request

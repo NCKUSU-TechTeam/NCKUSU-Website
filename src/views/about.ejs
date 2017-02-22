@@ -16,12 +16,20 @@
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.9.0/bootstrap-social.min.css" integrity="sha256-02JtFTurpwBjQJ6q13iJe82/NF0RbZlJroDegK5g87Y=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.4/select2.min.css" integrity="sha256-ijlUKKj3hJCiiT2HWo1kqkI79NTEYpzOsw5Rs3k42dI=" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.4/select2-bootstrap.min.css" integrity="sha256-NAWFcNIZdH+TS1xpWujF/EB/Y8gwBbEOCoaK/eqaer8=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="jumbotron-narrow.css">
         <style>
             html,body {
                 height:100%;
             }
             .carousel,.item,.active{
                 height:100%;
+            }
+            .carousel-inner {
+                background-image: url("ncku.jpg");
+                background-color: #000000;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 100% 85%;
             }
             .carousel-inner > .item > img {
                 margin: 0 auto;
@@ -30,93 +38,13 @@
                 background-color: #ffffff;
                 border-radius: 5px;
             }
-			body {
-				background-color: #000000;
-				margin: 0;
-				font-family: Helvetica, sans-serif;;
-				overflow: hidden;
-			}
-			a .detail_link {
-                position: absolute;
-				bottom: 15px;
-				left: 0px;
-				right: 0px;
-				font-size: 36px;
-				color: rgba(127,255,255,0.75);
-			}
-			#info {
-				position: absolute;
-				width: 100%;
-				color: #ffffff;
-				padding: 5px;
-				font-family: Monospace;
-				font-size: 13px;
-				font-weight: bold;
-				text-align: center;
-				z-index: 1;
-			}
-			#menu {
-				position: absolute;
-				bottom: 20px;
-				width: 100%;
-				text-align: center;
-			}
-			.element {
-				width: 120px;
-				height: 160px;
-				box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
-				border: 1px solid rgba(127,255,255,0.25);
-				text-align: center;
-				cursor: default;
-			}
-			.element:hover {
-				box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
-				border: 1px solid rgba(127,255,255,0.75);
-			}
-			.element .number {
-				position: absolute;
-				top: 20px;
-				right: 20px;
-				font-size: 12px;
-				color: rgba(127,255,255,0.75);
-			}
-			.element .symbol {
-				position: absolute;
-				top: 40px;
-				left: 0px;
-				right: 0px;
-				font-size: 60px;
-				font-weight: bold;
-				color: rgba(255,255,255,0.75);
-				text-shadow: 0 0 10px rgba(0,255,255,0.95);
-			}
-			.element .details {
-				position: absolute;
-				bottom: 15px;
-				left: 0px;
-				right: 0px;
-				font-size: 12px;
-				color: rgba(127,255,255,0.75);
-			}
-			button {
-				color: rgba(127,255,255,0.75);
-				background: transparent;
-				outline: 1px solid rgba(127,255,255,0.75);
-				border: 0px;
-				padding: 5px 10px;
-				cursor: pointer;
-			}
-			button:hover {
-				background-color: rgba(0,255,255,0.5);
-			}
-			button:active {
-				color: #000000;
-				background-color: rgba(0,255,255,0.75);
-			}
+            div .jumbotron{
+                margin-top: 4%;
+            }
         </style>
-    </head>
+        </head>
 
-    <header>
+        <header>
         <!-- LifeGamer's wrapper -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -160,21 +88,23 @@
                 </div>
             </div>
         </div>-->
-    </header>
+        </header>
+
     <body>
-        <!-- Mainly Using three.js example - periodic table as template -->
-        <div id="container"></div>
-		<!-- <div id="info"><a href="http://threejs.org" target="_blank">three.js css3d</a> - periodic table. <a href="https://plus.google.com/113862800338869870683/posts/QcFk5HrWran" target="_blank">info</a>.</div> -->
-		<div id="menu">
-			<button id="table">TABLE</button>
-			<button id="sphere">SPHERE</button>
-			<button id="helix">HELIX</button>
-			<button id="grid">GRID</button>
-		</div>
+        <div class="container">
+            <div class="jumbotron">
+            <h1 class="display-3">E.S.I.T.</h1>
+            <p class="lead">E-Sports and Intelligence Technology</p>
+            </div>
+            <div class="col-lg-6">
+                <h4> 網站服務的建置 </h4>
+                <p> 由部長帶領新進的部員學習基本網頁技術! </p>
+            </div>
+            <div class="col-lg-6">
+                <h4> 會內設備的建置與修繕 </h4>
+                <p> 例如: 門禁系統的建立，學習動手解決問題! </p>
+            </div>
+        </div>
     </body>
-    <script type='text/javascript' src="three.min.js"></script>
-    <script type='text/javascript' src="tween.min.js"></script>
-	<script type='text/javascript' src="TrackballControls.js"></script>
-	<script type='text/javascript' src="CSS3DRenderer.js"></script>
-    <script type='text/javascript' src="department-3d.js"></script>
+
 </html>

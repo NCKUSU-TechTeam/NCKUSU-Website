@@ -1,28 +1,28 @@
 var table = [
-    "廖宇祥", "學生會會長", "2016.9", 1,1,
-    "余培雅", "學生會副會長", "2016.9",2,1,
-	"瞿旭民", "資訊部部長", "2016.9", 3,1,
-    "蘇皇偉", "資訊部副部長","2016.9",3,2,
-    "cherry", "公關部部長","2016.9",4,1,
-    "洪立軒", "公關部副部長", "2016.9",4,2,
-    "蔡家寧", "財務部部長","2016.9",5,1,
-    "郭筱彤", "財務部副部長","2016.9",5,2,
-    "鄭宇正", "權益部部長","2016.9",6,1,
-    "王郁仁", "權益部副部長" , "2016.9",6,2,
-    "球寶", "新聞部部長" , "2016.9",7,1,
-    "王榆翔","新聞部副部長","2016.9",7,2,
-    "彭鈺淇", "新聞部副部長","2016.9",7,3,
-    "鄭芮竹", "外務部部長","2016.9",8,1,
-    "曾柏鈞", "外務部副部長","2016.9",8,2,
-    "陳昀聖", "活動部部長","2016.9",9,1,
-    "吳佩穎", "活動部副部長","2016.9",9,2,
-    "許哲睿", "秘書部部長","2016.9",10,1,
-    "張庭瑄", "秘書部副部長","2016.9",10,2,
-    "陳估熊", "學術部部長","2016.9",11,1,
-    "洪紋雅", "學術部副部長","2016.9",11,2,
-    "許樂", "研權部部長","2016.9",12,1,
-    "吳馨如", "研權部執秘","2016.9",12,2,
-    "史蕓瑄", "學生會執秘", "2016.9",13,1
+    "廖宇祥", "學生會會長", "2016.9", 1,1,'suc_president',
+    "余培雅", "學生會副會長", "2016.9",2,1,'suc_vicepresident',
+	"瞿旭民", "資訊部部長", "2016.9", 3,1,'suc_esit_minister',
+    "蘇皇偉", "資訊部副部長","2016.9",3,2,'suc_esit_viceminister',
+    "cherry", "公關部部長","2016.9",4,1,'suc_pr_minister',
+    "洪立軒", "公關部副部長", "2016.9",4,2,'suc_pr_viceminister',
+    "蔡家寧", "財務部部長","2016.9",5,1,'suc_fd_minister',
+    "郭筱彤", "財務部副部長","2016.9",5,2,'suc_fd_viceminister',
+    "鄭宇正", "權益部部長","2016.9",6,1,'suc_ri_minister',
+    "王郁仁", "權益部副部長" , "2016.9",6,2,'suc_ri_viceminister',
+    "球寶", "新聞部部長" , "2016.9",7,1,'suc_news_minister',
+    "王榆翔","新聞部副部長","2016.9",7,2,'suc_news_viceminister',
+    "彭鈺淇", "新聞部副部長","2016.9",7,3,'suc_news_viceminister_2',
+    "鄭芮竹", "外務部部長","2016.9",8,1,'suc_isr_minister',
+    "曾柏鈞", "外務部副部長","2016.9",8,2,'suc_isr_viceminister',
+    "陳昀聖", "活動部部長","2016.9",9,1,'suc_ppap_minister',
+    "吳佩穎", "活動部副部長","2016.9",9,2,'suc_ppap_viceminister',
+    "許哲睿", "秘書部部長","2016.9",10,1,'suc_hr_minister',
+    "張庭瑄", "秘書部副部長","2016.9",10,2,'suc_hr_viceminister',
+    "陳估熊", "學術部部長","2016.9",11,1,'suc_ad_minister',
+    "洪紋雅", "學術部副部長","2016.9",11,2,'suc_ad_viceminister',
+    "許樂", "研權部部長","2016.9",12,1,'suc_gsr_minister',
+    "吳馨如", "研權部執秘","2016.9",12,2,'suc_gsr_secretary',
+    "史蕓瑄", "學生會執秘", "2016.9",13,1,'suc_secretary'
 ];
 var camera, scene, renderer;
 var controls;
@@ -35,14 +35,14 @@ function init() {
 	camera.position.z = 3000;
 	scene = new THREE.Scene();
 	// table
-	for ( var i = 0; i < table.length; i += 5 ) {
+	for ( var i = 0; i < table.length; i += 6 ) {
 		var element = document.createElement( 'div' );
 		element.className = 'element';
 		element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
 		var number = document.createElement( 'div' );
 		number.className = 'number';
         number.style.fontSize = '24px';
-		number.textContent = (i/5) + 1;
+		number.textContent = (i/6) + 1;
 		element.appendChild( number );
 		var symbol = document.createElement( 'div' );
 		symbol.className = 'symbol';
@@ -51,7 +51,7 @@ function init() {
 		element.appendChild( symbol );
 		var details = document.createElement( 'div' );
 		details.className = 'details';
-		details.innerHTML = table[ i + 1 ] + '<br>' + table[ i + 2 ];
+		details.innerHTML = '<a class="detail_link" href=\"/'+table[i+5]+'\">'+table[ i + 1 ] + '<br>' + table[ i + 2 ] +'</a>';
         details.style.fontSize = '36px';
 		element.appendChild( details );
 		var object = new THREE.CSS3DObject( element );
