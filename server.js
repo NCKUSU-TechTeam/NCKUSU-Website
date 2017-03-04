@@ -10,6 +10,7 @@ const storage_data = __dirname+'/data';
 /* Setting static directory - resources */
 app.use(express.static('src/lib'));
 app.use(express.static('src/core'));
+app.use(express.static('src/js'));
 app.use(express.static('src/images'));
 app.use(express.static('src/css'));
 app.use(express.static('src/data'));
