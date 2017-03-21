@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <!-- Include meta.ejs -->
+    <% include ../elements/meta %>
+    <!-- Include lib.ejs -->
+    <% include ../elements/lib %>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-slide">
+            <!-- Title frame -->
+            <div class="title-frame">
+                <div class="title-header">
+                    <a class="title" id="typewrite" data-sr="top wait 3.3s 90px" href="http://www.facebook.com/NCKUSU">NCKUSU.edu.tw</a>
+                    <span>&nbsp;</span>
+                    <span data-sr="top wait 3.5s 90px">i</span>
+                    <span data-sr="top wait 3.6s 90px">s</span>
+                    <span>&nbsp;</span>
+                    <span data-sr="top wait 3.7s 90px">c</span>
+                    <span data-sr="top wait 3.8s 90px">o</span>
+                    <span data-sr="top wait 3.9s 90px">m</span>
+                    <span data-sr="top wait 4.0s 90px">i</span>
+                    <span data-sr="top wait 4.1s 90px">n</span>
+                    <span data-sr="top wait 4.2s 90px">g</span>
+                    <span>&nbsp;</span>
+                    <span data-sr="top wait 4.3s 90px">s</span>
+                    <span data-sr="top wait 4.4s 90px">o</span>
+                    <span data-sr="top wait 4.5s 90px">o</span>
+                    <span data-sr="top wait 4.6s 90px">n</span>
+                </div>
+                <div class="title-body">
+                    <p data-sr="bottom wait 4.6s 90px">Our website will officially online in the near future.</p>
+                </div>
+                
+                <div class="title-social">
+                    <ul>
+                        <li data-sr="top wait 4.9s 90px">
+                            <a href="<%= link.facebook %>">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li data-sr="top wait 5.0s 90px">
+                            <a href="mailto:mail@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li data-sr="top wait 5.2s 90px">
+                            <a href="#google-plus">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li data-sr="top wait 5.3s 90px">
+                            <a href="#flickr">
+                                <i class="fa fa-flickr"></i>
+                            </a>
+                        </li>
+                        <li data-sr="top wait 5.4s 90px">
+                            <a href="#instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li data-sr="top wait 5.5s 90px">
+                            <a href="#linkedin">
+                                <i class="fa fa-linkedin-square"></i>
+                            </a>
+                        </li>
+                        <li data-sr="top wait 5.6s 90px">
+                            <a href="#slideshare">
+                                <i class="fa fa-slideshare"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="title-bottom">
+                    <p id="regtime" data-sr="bottom wait 5.6s 90px">Since 1997</p>
+                    <p id="percentage" data-sr="bottom wait 5.7s 90px">40%</p>
+                </div>
+            </div>
+            <div class="licence-frame">
+                <p id="copyright" data-sr="bottom wait 5.8s 90px">Copyright 2016 by <a href="<%= link.facebook %>">National Cheng Kung University Student Union (NCKUSU)</a>. All Rights Reserved.
+                </p>
+                <p id="designer" data-sr="bottom wait 5.8s 90px">Dedicated to all members in NCKUSU.</p>
+            </div>
+            <div class="overlay"></div>
+            <!-- Backgound image -->
+            <div class="slideshow">
+                <img id="bg" src="bg.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

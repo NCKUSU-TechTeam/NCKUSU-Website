@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+    /* font-smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* continer */
+
+.container {
+    height: inherit;
+    overflow: hidden;
+    position: relative;
+    width: inherit;
+}
+
+/* container-slide */
+
+.container .container-slide {
+    height: inherit;
+    margin: 0;
+    position: relative;
+    width: inherit;
+}
+
+.container-slide .slideshow {
+    height: auto;
+    position: relative;
+    width: 100%;
+    z-index: -1000;
+}
+
+.container-slide .slideshow #bg {
+    /* animation */
+    animation: scale 10s 4.2s;
+    -webkit-animation: scale 10s 4.2s;
+    /* animation-fill-mode */
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container-slide .overlay {
+    /* border */
+    border-bottom: 40vh solid rgba(204, 102, 0, 0.5);
+    height: 100%;
+    position: fixed;
+    bottom: 0;
+    left: -60%;
+    /* animation */
+    animation: move 1.5s ease-in-out 1.5s;
+    -webkit-animation: move 1.5s ease-in-out 1.5s;
+    /* animation-fill-mode */
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    width: 60%;
+    z-index: 1;
+}
+
+@-webkit-keyframes move {
+    0% {
+        left: -60%;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+@-webkit-keyframes move {
+    0% {
+        left: -60%;
+        width: 0;
+    }
+    100% {
+        left: 0;
+        width: 100%;
+    }
+}
+
+/* title-frame */
+
+.container .title-frame {
+    height: 40vh;
+    margin: 0;
+    position: relative;
+    top: 60vh;
+    width: inherit;
+    z-index: 1000;
+}
+
+.title-frame .title-header {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 15px;
+    position: relative;
+    top: 0;
+    text-align: center;
+    width: inherit;
+}
+
+.title-frame .title-header .title {
+    background: rgba(153, 76, 0, 0.2);
+    /* border-radius */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2em;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    /* transition */
+    transition: all 3.5s ease;
+    -webkit-transition: all 3.5s ease;
+    -moz-transition: all 3.5s ease;
+    -ms-transition: all 3.5s ease;
+    -o-transition: all 3.5s ease;
+}
+
+.title-frame .title-header .title:hover {
+    background: rgba(51, 25, 0, 0.5);
+}
+
+.title-frame .title-header span {
+    font-family: 'Mate SC', cursive;
+    font-size: 1.2em;
+}
+
+/* title-body */
+.title-frame .title-body {
+    padding: 0.25% 0 0 0;
+    position: relative;
+    width: inherit;
+}
+
+.title-frame .title-body p {
+    color: #D6F2E4;
+    font-family: 'Kalam', cursive;
+    font-size: 1.4em;
+    line-height: 100%;
+    text-align: center;
+}
+
+/* title-social */
+.title-frame .title-social {
+    height: 5%;
+    padding: 0.25% 0 0 0;
+    position: relative;
+}
+
+.title-frame .title-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.title-frame .title-social ul li {
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px 16px 0 0;
+}
+
+.title-frame .title-social ul li:last-child {
+    margin: 0;
+}
+
+.title-frame .title-social ul li a {
+    color: #FFFFFF;
+    display: block;
+    width: 20px;
+}
+
+/* title-bottom */
+.title-frame .title-bottom {
+    height: 25%;
+    padding: 2.5% 0 0 0;
+    position: relative;
+    text-align: center;
+}
+
+.title-frame .title-bottom #regtime {
+    color: #FFFFFF;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.5em;
+}
+
+.title-frame .title-bottom #percentage {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Economica', sans-serif;
+    font-size: 1.5em;
+}
+
+/* licence-frame */
+
+.container-slide .licence-frame {
+    position: absolute;
+    bottom: 0.5%;
+    left: 0.5%;
+    z-index: 1000;
+}
+
+.licence-frame #copyright,
+.licence-frame #designer {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Economica', sans-serif;
+    font-size: 0.9em;
+    line-height: 50%;
+    text-align: left;
+}
+
+.licence-frame #copyright a,
+.licence-frame #designed a {
+    background: rgba(0, 0, 51, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    /* border-radius */
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 2px 5px 2px 5px;
+    text-decoration: none;
+}
